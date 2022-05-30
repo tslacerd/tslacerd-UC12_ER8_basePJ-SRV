@@ -136,18 +136,18 @@ do
 
 
                         //tarefa txt
-                         using (StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt"))
-                         {
-                        sw.WriteLine(novaPf.Nome);
-                        sw.WriteLine(novaPf.Cpf);
-                        sw.WriteLine(novaPf.rendimento);
-                        sw.WriteLine(novoEnd.logradouro);
-                        sw.WriteLine(novoEnd.numero);
-                        sw.WriteLine(novoEnd.Complemento);
-                         }
+                        using (StreamWriter sw = new StreamWriter($"{novaPf.Nome}.txt"))
+                        {
+                            sw.WriteLine(novaPf.Nome);
+                            sw.WriteLine(novaPf.Cpf);
+                            sw.WriteLine(novaPf.rendimento);
+                            sw.WriteLine(novoEnd.logradouro);
+                            sw.WriteLine(novoEnd.numero);
+                            sw.WriteLine(novoEnd.Complemento);
+                        }
 
 
-                        
+
 
                         Console.WriteLine($"Cadastro realizado com sucesso");
                         Thread.Sleep(3000);
@@ -164,8 +164,8 @@ do
                             string? linha;
                             while ((linha = sr.ReadLine()) != null)
                             {
-                               Console.WriteLine($"{linha}");
-                                
+                                Console.WriteLine($"{linha}");
+
                             }
                         }
 
@@ -302,23 +302,6 @@ do
                                 ");
                             }
 
-                            metodoPj.Inserir(novaPj);
-
-                            List<PessoaJuridica> listaPj = metodoPj.LerArquivo();
-                            foreach (PessoaJuridica cadaPj in listapj)
-                            {
-                                Console.Clear();
-                                Console.WriteLine(@$"
-                                Nome: {cadaPj.nome}
-                                Razão Social: {cadapj.razaosocial}
-                                CNPJ: {cadaPj.Cnpj}
-                                ");
-
-                                Console.WriteLine($"Aperte Enter para continuar");
-                                Console.ReadLine();
-                                
-                                
-                            }
                         }
                         else
                         {

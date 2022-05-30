@@ -57,39 +57,9 @@ namespace CadastroPessoa.Classes
                     
         } 
         return false;
-    }
-
-    public void Inserir(PessoaJuridica pj){
-
-            verificarPastaArquivo(caminho);
-
-
-            string [] pjString = {$"{pj.Nome}; {pj.Cnpj}; {pj.razaoSocial}"};
-
-            File.AppendAllLines(caminho, pjString);
-    }
-
-    public List <PessoaJuridica> LerArquivo(){
-        List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
-
-        string[] linhas = File.ReadAllLines(caminho);
-
-        foreach (string cadalinha in linhas)
-        {
-            string[] atributos = cadalinha.Split(",");
-
-            PessoaJuridica cadapj = new PessoaJuridica();
-
-            cadapj.Nome = atributos[0];
-            cadapj.Cnpj = atributos[1];
-            cadapj.razaoSocial = atributos[2];
-
-            listaPj.Add(cadapj);
         }
 
-        return listaPj;
-    }
-
+    
         internal List<PessoaJuridica> LerArquivo();
         {
             throw new NotImplementedException();
@@ -99,5 +69,5 @@ namespace CadastroPessoa.Classes
         {
             throw new NotImplementedException();
         }
-    }
+    
 }
